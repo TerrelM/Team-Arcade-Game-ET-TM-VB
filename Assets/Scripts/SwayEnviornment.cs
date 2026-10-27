@@ -1,34 +1,66 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class SwayEnviornment : MonoBehaviour
 {
-    public float speed;
+    [Header("Sway Acceleration")]
+    [Tooltip("How fast we approach the max sway speed.")]
+    public float acceleration;
+    [Header("Sway Maximum Speed")]
+    [Tooltip("The max speed the level can sway.")]
+    public float maxSpeed;
+    [Header("Sway Tilt Amounts")]
+    [Tooltip("How far to tilt in the x and z axis.")]
     public float swayTiltX;
     public float swayTiltZ;
+
+    //Private Veriables
+    private Rigidbody rb;
+    private Vector3 position;
     private float swayAmount;
-    private float swaySpeed;
+    private float swayAcceleration;
+    private float swayVelocity;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        swaySpeed = speed;
+        rb = GetComponent<Rigidbody>();
+        position = transform.position;
+        swayAcceleration = acceleration;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Set the velocity of sway. (For a smoother more naturally looking motion.)
+        swayVelocity += swayAcceleration * Time.deltaTime;
+        if (swayVelocity > maxSpeed)
+        {
+            swayVelocity = maxSpeed;
+        }
+        if (swayVelocity < -maxSpeed)
+        {
+            swayVelocity = -maxSpeed;
+        }
+
+        //If we are swaying too much into one side we turn around.
         if (swayAmount >= 1)
         {
-            swaySpeed = -speed;
+            swayAcceleration = -acceleration;
         }
         else if (swayAmount <= -1)
         {
-            swaySpeed = speed;
+            swayAcceleration = acceleration;
         }
 
-        swayAmount += swaySpeed * Time.deltaTime;
+        //Add velocity and calculate the tilt amounts.
+        swayAmount += swayVelocity * Time.deltaTime;
+        float tiltAmountX = swayAmount * swayTiltX;
+        float tiltAmountZ = swayAmount * swayTiltZ;
 
-        transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, swayAmount);
 
-        Debug.Log("swayAmount: " + swayAmount);
+
+        //Apply Rotations
+        rb.position = position;
+        rb.rotation = Quaternion.Euler(tiltAmountX, 0, tiltAmountZ);
     }
 }
