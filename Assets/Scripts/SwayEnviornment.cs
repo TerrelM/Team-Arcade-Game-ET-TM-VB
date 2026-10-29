@@ -29,10 +29,10 @@ public class SwayEnviornment : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //Set the velocity of sway. (For a smoother more naturally looking motion.)
-        swayVelocity += swayAcceleration * Time.deltaTime;
+        swayVelocity += swayAcceleration * Time.fixedDeltaTime;
         if (swayVelocity > maxSpeed)
         {
             swayVelocity = maxSpeed;
@@ -53,7 +53,7 @@ public class SwayEnviornment : MonoBehaviour
         }
 
         //Add velocity and calculate the tilt amounts.
-        swayAmount += swayVelocity * Time.deltaTime;
+        swayAmount += swayVelocity * Time.fixedDeltaTime;
         float tiltAmountX = swayAmount * swayTiltX;
         float tiltAmountZ = swayAmount * swayTiltZ;
 
