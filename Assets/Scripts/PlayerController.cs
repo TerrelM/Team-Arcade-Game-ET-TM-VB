@@ -227,8 +227,8 @@ public class PlayerController : MonoBehaviour
     {
         //Raycast with direction... and… MAGNITUDE! OH YEAH!
         RaycastHit hit;
-        Vector3 origin = transform.position + capsule.center + Vector3.down * (capsule.height / 2f);
-        float magnitude = groundTolerance;
+        Vector3 origin = transform.position + capsule.center + Vector3.up * (groundTolerance  - capsule.height / 2f);
+        float magnitude = groundTolerance * 2f;
 
         //Result
         bool result = Physics.Raycast(origin, Vector3.down, out hit, magnitude);
