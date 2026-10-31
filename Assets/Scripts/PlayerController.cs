@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -102,30 +103,16 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //============================================================================================ >> INPUT ACTIONS <<
-        //Move Action
-        move = inputActions.Player.Move.ReadValue<Vector2>();
 
-        //Jump Action
-        jump = inputActions.Player.Jump.IsPressed();
-        if (inputActions.Player.Jump.WasPressedThisFrame())
+        if (name == "Player1")
         {
-            jumpPressed = true;
+            Player1Controls();
         }
-        if (inputActions.Player.Jump.WasReleasedThisFrame())
+        if (name == "Player2")
         {
-            jumpReleased = true;
+            Player2Controls();
         }
-
-        //Attack Action
-        attack = inputActions.Player.Attack.IsPressed();
-        if (inputActions.Player.Attack.WasPressedThisFrame())
-        {
-            attackPressed = true;
-        }
-        if (inputActions.Player.Attack.WasReleasedThisFrame())
-        {
-            attackReleased = true;
-        }
+        
     }
     void FixedUpdate()
     {
@@ -251,6 +238,64 @@ public class PlayerController : MonoBehaviour
 
         return result;
     }
+    private void Player1Controls()
+    {
+        //Move Action
+        move = inputActions.Player.Move.ReadValue<Vector2>();
+
+
+        //Jump Action
+        jump = inputActions.Player.Jump.IsPressed();
+        if (inputActions.Player.Jump.WasPressedThisFrame())
+        {
+            jumpPressed = true;
+        }
+        if (inputActions.Player.Jump.WasReleasedThisFrame())
+        {
+            jumpReleased = true;
+        }
+
+        //Attack Action
+        attack = inputActions.Player.Attack.IsPressed();
+        if (inputActions.Player.Attack.WasPressedThisFrame())
+        {
+            attackPressed = true;
+        }
+        if (inputActions.Player.Attack.WasReleasedThisFrame())
+        {
+            attackReleased = true;
+        }
+    }
+
+    private void Player2Controls()
+    {
+        //Move Action
+        move = inputActions.Player2.Move.ReadValue<Vector2>();
+
+
+        //Jump Action
+        jump = inputActions.Player2.Jump.IsPressed();
+        if (inputActions.Player2.Jump.WasPressedThisFrame())
+        {
+            jumpPressed = true;
+        }
+        if (inputActions.Player2.Jump.WasReleasedThisFrame())
+        {
+            jumpReleased = true;
+        }
+
+        //Attack Action
+        attack = inputActions.Player2.Attack.IsPressed();
+        if (inputActions.Player2.Attack.WasPressedThisFrame())
+        {
+            attackPressed = true;
+        }
+        if (inputActions.Player2.Attack.WasReleasedThisFrame())
+        {
+            attackReleased = true;
+        }
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         // Removes health

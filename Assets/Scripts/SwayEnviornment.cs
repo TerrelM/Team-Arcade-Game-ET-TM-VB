@@ -27,7 +27,7 @@ public class SwayEnviornment : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         position = transform.position;
         swayAcceleration = acceleration;
-        playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+        playerController = GameObject.Find("Player1").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
