@@ -20,12 +20,14 @@ public class SwayEnviornment : MonoBehaviour
     private float swayAmount;
     private float swayAcceleration;
     private float swayVelocity;
+    private PlayerController playerController;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         position = transform.position;
         swayAcceleration = acceleration;
+        playerController = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame

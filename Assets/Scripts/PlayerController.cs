@@ -8,6 +8,10 @@ public class PlayerController : MonoBehaviour
     private CapsuleCollider capsule;
     private InputSystem_Actions inputActions;
 
+    // Keeps track of player health & gameover state
+    public int health = 3;
+    public bool gameOver = false;
+
     //========================================================================================== >> INPUT VARIABLES <<
     //Move
     private Vector2 move;
@@ -74,9 +78,16 @@ public class PlayerController : MonoBehaviour
         inputActions.Disable();
     }
 
+    public void AddHealth(int value)
+    {
+        // Sets default health to 3
+        health += value;
 
-
-
+        if (health <= 0)
+        {
+            gameOver = true;
+        }
+    }
 
     void Start()
     {
@@ -85,6 +96,7 @@ public class PlayerController : MonoBehaviour
         capsule = GetComponent<CapsuleCollider>();
         gravity = gravityStrong;
         startDecent = false;
+
     }
 
     void Update()
@@ -238,5 +250,19 @@ public class PlayerController : MonoBehaviour
         //Debug.DrawRay(origin, Vector3.down * magnitude, Color.green);
 
         return result;
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        // Removes health
+        if (collision.gameObject.CompareTag("HealthDown"))
+        {
+            health -= 1;
+        }
+
+        // Adds health
+        if (collision.gameObject.CompareTag("HealthUp"))
+        {
+            health += 1;
+        }
     }
 }

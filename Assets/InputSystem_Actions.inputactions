@@ -13,7 +13,8 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": true,
+                    "priority": 0
                 },
                 {
                     "name": "Jump",
@@ -22,7 +23,8 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
                 },
                 {
                     "name": "Attack",
@@ -31,7 +33,8 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
                 }
             ],
             "bindings": [
@@ -125,7 +128,8 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
                 },
                 {
                     "name": "Submit",
@@ -134,7 +138,8 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
                 },
                 {
                     "name": "Cancel",
@@ -143,7 +148,8 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
                 },
                 {
                     "name": "Point",
@@ -152,7 +158,8 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": true,
+                    "priority": 0
                 },
                 {
                     "name": "Click",
@@ -161,7 +168,8 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": true,
+                    "priority": 0
                 },
                 {
                     "name": "RightClick",
@@ -170,7 +178,8 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
                 },
                 {
                     "name": "MiddleClick",
@@ -179,7 +188,8 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
                 },
                 {
                     "name": "ScrollWheel",
@@ -188,7 +198,8 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
                 },
                 {
                     "name": "TrackedDevicePosition",
@@ -197,7 +208,8 @@
                     "expectedControlType": "Vector3",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
                 },
                 {
                     "name": "TrackedDeviceOrientation",
@@ -206,7 +218,8 @@
                     "expectedControlType": "Quaternion",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
                 }
             ],
             "bindings": [
@@ -625,6 +638,121 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "TrackedDeviceOrientation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Player2",
+            "id": "a5fcb993-e11f-4eab-8a82-67cdc607a039",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "e8b154de-a3a6-4654-b479-9b2ac4335ef0",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true,
+                    "priority": 0
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "d4e1e78f-c02e-4824-b2b0-83ff5af95e13",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "Attack",
+                    "type": "Button",
+                    "id": "b851686e-38f7-45fc-aeff-fd5cba8c74f6",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "ARROWS",
+                    "id": "78d09c4d-09c3-4f5c-9a2f-661cfe1dc15d",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "8c6277bd-eac9-410c-b045-5568e73dc89f",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "609f2943-5f1e-4164-b05a-3cc61ac773ec",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "82886a4a-6852-4355-8469-79b90db82c29",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "a26192a0-8319-4996-a953-e2a894bf0e1c",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "ff0e9d0e-7e55-4c26-824e-e7b6252f0cb2",
+                    "path": "<Keyboard>/numpad8",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ef88ae4c-8975-4a04-a210-a6996354346e",
+                    "path": "<Keyboard>/numpad9",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
