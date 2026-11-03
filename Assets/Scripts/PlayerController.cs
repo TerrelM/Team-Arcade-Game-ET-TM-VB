@@ -25,6 +25,10 @@ public class PlayerController : MonoBehaviour
     private bool attack;
     private bool attackPressed;
     private bool attackReleased;
+    //Thwack
+    private bool thwack;
+    private bool thwackPressed;
+    private bool thwackReleased;
 
     //=================================================================================================== >> FORCES <<
     //Velocity
@@ -272,6 +276,17 @@ public class PlayerController : MonoBehaviour
         {
             attackReleased = true;
         }
+
+        // Thwack Action
+        thwack = inputActions.Player.Thwack.IsPressed();
+        if (inputActions.Player.Thwack.WasPressedThisFrame())
+        { 
+            thwackPressed = true; 
+        }
+        if (inputActions.Player.Thwack.WasReleasedThisFrame())
+        { 
+            thwackReleased = true; 
+        }
     }
 
     private void Player2Controls()
@@ -300,6 +315,17 @@ public class PlayerController : MonoBehaviour
         if (inputActions.Player2.Attack.WasReleasedThisFrame())
         {
             attackReleased = true;
+        }
+
+        // Thwack Action
+        thwack = inputActions.Player2.Thwack.IsPressed();
+        if (inputActions.Player.Thwack.WasPressedThisFrame())
+        {
+            thwackPressed = true;
+        }
+        if (inputActions.Player2.Thwack.WasReleasedThisFrame())
+        {
+            thwackReleased = true;
         }
     }
 
