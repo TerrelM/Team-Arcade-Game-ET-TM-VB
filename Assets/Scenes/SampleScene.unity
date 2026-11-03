@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 39935336}
   - component: {fileID: 39935335}
   - component: {fileID: 39935334}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShipStairs2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2010,7 +2010,7 @@ GameObject:
   - component: {fileID: 82197854}
   - component: {fileID: 82197853}
   - component: {fileID: 82197852}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShipUpperRailing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2519,7 +2519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 252749077}
   - component: {fileID: 252749078}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Barrier (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2753,7 +2753,7 @@ GameObject:
   - component: {fileID: 325314045}
   - component: {fileID: 325314044}
   - component: {fileID: 325314043}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShipRailing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3603,7 +3603,7 @@ GameObject:
   - component: {fileID: 502390352}
   - component: {fileID: 502390351}
   - component: {fileID: 502390350}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShipUpperDeck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3924,6 +3924,89 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1702313917}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &527323292
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1394475005}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: c33bcad03ad2be64f84efe5f1faba19f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c33bcad03ad2be64f84efe5f1faba19f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c33bcad03ad2be64f84efe5f1faba19f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c33bcad03ad2be64f84efe5f1faba19f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c33bcad03ad2be64f84efe5f1faba19f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c33bcad03ad2be64f84efe5f1faba19f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c33bcad03ad2be64f84efe5f1faba19f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c33bcad03ad2be64f84efe5f1faba19f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c33bcad03ad2be64f84efe5f1faba19f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c33bcad03ad2be64f84efe5f1faba19f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c33bcad03ad2be64f84efe5f1faba19f, type: 3}
+      propertyPath: m_Name
+      value: Bomb_LowPoly
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c33bcad03ad2be64f84efe5f1faba19f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 527323295}
+  m_SourcePrefab: {fileID: 100100000, guid: c33bcad03ad2be64f84efe5f1faba19f, type: 3}
+--- !u!4 &527323293 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c33bcad03ad2be64f84efe5f1faba19f, type: 3}
+  m_PrefabInstance: {fileID: 527323292}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &527323294 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c33bcad03ad2be64f84efe5f1faba19f, type: 3}
+  m_PrefabInstance: {fileID: 527323292}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &527323295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527323294}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a4c227ee7388154f81d681485237b21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::spinBomb
+  spinSpeed: {x: 45, y: 45, z: -90}
 --- !u!1 &539188336
 GameObject:
   m_ObjectHideFlags: 0
@@ -3937,7 +4020,7 @@ GameObject:
   - component: {fileID: 539188340}
   - component: {fileID: 539188339}
   - component: {fileID: 539188338}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShipUpperRailing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4449,7 +4532,7 @@ GameObject:
   - component: {fileID: 668983011}
   - component: {fileID: 668983010}
   - component: {fileID: 668983009}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShipFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4958,7 +5041,7 @@ GameObject:
   m_Component:
   - component: {fileID: 742316188}
   - component: {fileID: 742316189}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Barrier (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5014,7 +5097,7 @@ GameObject:
   - component: {fileID: 777067608}
   - component: {fileID: 777067607}
   - component: {fileID: 777067606}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShipUpperDeck2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5345,7 +5428,7 @@ GameObject:
   m_Component:
   - component: {fileID: 800417107}
   - component: {fileID: 800417108}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Barrier (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5448,7 +5531,7 @@ GameObject:
   - component: {fileID: 908972625}
   - component: {fileID: 908972627}
   - component: {fileID: 908972626}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ship Exmple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5530,7 +5613,7 @@ GameObject:
   - component: {fileID: 911307528}
   - component: {fileID: 911307527}
   - component: {fileID: 911307526}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CubeReference
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5883,7 +5966,7 @@ GameObject:
   m_Component:
   - component: {fileID: 940088742}
   - component: {fileID: 940088743}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Barrier (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6117,7 +6200,7 @@ GameObject:
   - component: {fileID: 964014022}
   - component: {fileID: 964014021}
   - component: {fileID: 964014020}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShipStairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7995,7 +8078,7 @@ GameObject:
   - component: {fileID: 1145508864}
   - component: {fileID: 1145508863}
   - component: {fileID: 1145508862}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Height Reference
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8492,7 +8575,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1358857916}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShipColliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8519,6 +8602,104 @@ Transform:
   - {fileID: 940088742}
   m_Father: {fileID: 908972625}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1394475004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1394475005}
+  - component: {fileID: 1394475007}
+  - component: {fileID: 1394475006}
+  - component: {fileID: 1394475008}
+  m_Layer: 0
+  m_Name: Bomb
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1394475005
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394475004}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.9, y: 3.42293, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 527323293}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1394475006
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394475004}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1
+  m_Center: {x: -0, y: 0, z: 0}
+--- !u!54 &1394475007
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394475004}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 8
+  m_CollisionDetection: 0
+--- !u!114 &1394475008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394475004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 858dc16934f0f5a408f6ea96b941be6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::bombBounce
+  bounceStrength: 10
+  stretchScale: 0.8
+  bounceTime: 0.1
 --- !u!43 &1404852742
 Mesh:
   m_ObjectHideFlags: 0
@@ -8709,13 +8890,13 @@ GameObject:
   - component: {fileID: 1450963372}
   - component: {fileID: 1450963371}
   - component: {fileID: 1450963370}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1450963369
 Transform:
   m_ObjectHideFlags: 0
@@ -9341,7 +9522,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1702313917}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ship Parts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9383,7 +9564,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1808091168}
   - component: {fileID: 1808091169}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Barrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10020,3 +10201,4 @@ SceneRoots:
   - {fileID: 425362717}
   - {fileID: 2049855933}
   - {fileID: 2010892445}
+  - {fileID: 1394475005}
