@@ -81,6 +81,8 @@ public class PlayerController : MonoBehaviour
 
     public void AddHealth(int value)
     {
+        // Only public for testing reasons
+        
         // Sets default health to 3
         health += value;
 
