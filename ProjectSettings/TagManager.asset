@@ -6,6 +6,7 @@ TagManager:
   tags:
   - HealthUp
   - HealthDown
+  - ObstacleManager
   layers:
   - Default
   - TransparentFX
