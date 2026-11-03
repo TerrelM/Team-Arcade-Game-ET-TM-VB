@@ -272,6 +272,14 @@ public class PlayerController : MonoBehaviour
         {
             attackReleased = true;
         }
+
+        // Attack2 Action
+        /*[TBD] = inputActions.Player.[TBD].IsPressed();
+         * if (inputActions.Player.[TBD].WasPressedThisFrame())
+         * { [TBD]Pressed = true; }
+         * if (inputActions.Player.[TBD].WasReleasedThisFrame())
+         * { [TBD]Released = true; }
+        */
     }
 
     private void Player2Controls()
@@ -301,6 +309,14 @@ public class PlayerController : MonoBehaviour
         {
             attackReleased = true;
         }
+
+        // Attack2 Action
+        /*[TBD] = inputActions.Player2.[TBD].IsPressed();
+         * if (inputActions.Player2.[TBD].WasPressedThisFrame())
+         * { [TBD]Pressed = true; }
+         * if (inputActions.Player2.[TBD].WasReleasedThisFrame())
+         * { [TBD]Released = true; }
+        */
     }
 
     private void OnCollisionEnter(Collision collision)
