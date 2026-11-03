@@ -215,7 +215,18 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""abe6f6f0-2d0f-454b-a5b3-180f689a70e3"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1d193f74-01b8-435e-989d-1149e84fc847"",
+                    ""path"": ""<Keyboard>/v"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -889,7 +900,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""ef88ae4c-8975-4a04-a210-a6996354346e"",
-                    ""path"": ""<Keyboard>/numpad9"",
+                    ""path"": ""<Keyboard>/numpad8"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -900,7 +911,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""8ddeac81-42eb-4f65-9089-f8ca8dbeb1f1"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/numpad5"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -911,7 +922,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""dc507706-29c2-4849-84b7-50c90a542ba7"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/5"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -922,7 +933,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""6417ed81-b5c4-4390-bea2-12276a0c42d0"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/8"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
