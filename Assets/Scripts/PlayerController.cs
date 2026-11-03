@@ -25,6 +25,10 @@ public class PlayerController : MonoBehaviour
     private bool attack;
     private bool attackPressed;
     private bool attackReleased;
+    //Thwack
+    private bool thwack;
+    private bool thwackPressed;
+    private bool thwackReleased;
 
     //=================================================================================================== >> FORCES <<
     //Velocity
@@ -273,13 +277,16 @@ public class PlayerController : MonoBehaviour
             attackReleased = true;
         }
 
-        // Attack2 Action
-        /*[TBD] = inputActions.Player.[TBD].IsPressed();
-         * if (inputActions.Player.[TBD].WasPressedThisFrame())
-         * { [TBD]Pressed = true; }
-         * if (inputActions.Player.[TBD].WasReleasedThisFrame())
-         * { [TBD]Released = true; }
-        */
+        // Thwack Action
+        thwack = inputActions.Player.Thwack.IsPressed();
+        if (inputActions.Player.Thwack.WasPressedThisFrame())
+        { 
+            thwackPressed = true; 
+        }
+        if (inputActions.Player.Thwack.WasReleasedThisFrame())
+        { 
+            thwackReleased = true; 
+        }
     }
 
     private void Player2Controls()
@@ -310,13 +317,16 @@ public class PlayerController : MonoBehaviour
             attackReleased = true;
         }
 
-        // Attack2 Action
-        /*[TBD] = inputActions.Player2.[TBD].IsPressed();
-         * if (inputActions.Player2.[TBD].WasPressedThisFrame())
-         * { [TBD]Pressed = true; }
-         * if (inputActions.Player2.[TBD].WasReleasedThisFrame())
-         * { [TBD]Released = true; }
-        */
+        // Thwack Action
+        thwack = inputActions.Player2.Thwack.IsPressed();
+        if (inputActions.Player.Thwack.WasPressedThisFrame())
+        {
+            thwackPressed = true;
+        }
+        if (inputActions.Player2.Thwack.WasReleasedThisFrame())
+        {
+            thwackReleased = true;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
