@@ -98,6 +98,11 @@ public class PlayerController : MonoBehaviour
         gravity = gravityStrong;
         startDecent = false;
 
+        // Allows players to cancel/quit the game
+        if (Input.GetKeyUp(KeyCode.Escape) || Input.GetButtonUp("Cancel"))
+        {
+            Application.Quit();
+        }
     }
 
     void Update()
