@@ -83,18 +83,6 @@ public class PlayerController : MonoBehaviour
         inputActions.Disable();
     }
 
-    public void AddHealth(int value)
-    {
-        // Only public for testing reasons
-        
-        // Sets default health to 3
-        health += value;
-
-        if (health <= 0)
-        {
-            gameOver = true;
-        }
-    }
 
     void Start()
     {
@@ -341,6 +329,17 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("HealthUp"))
         {
             health += 1;
+        }
+    }
+
+    private void AddHealth(int value)
+    {
+        // Sets default health to 3
+        health += value;
+
+        if (health <= 0)
+        {
+            gameOver = true;
         }
     }
 }
