@@ -8621,8 +8621,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34be8137e443b3e4e947f8c305a63643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
-  gameOver: 0
   walkSpeed: 10
   walkAcceleration: 45
   walkDeceleration: 30
@@ -8633,6 +8631,7 @@ MonoBehaviour:
   gravityWeak: 45
   jumpBuffer: 0.15
   groundTolerance: 0.15
+  pelletPrefab: {fileID: 5767118112691267283, guid: 0f97654ad5c439842a70a3739773b149, type: 3}
 --- !u!136 &1324357254
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9540,8 +9539,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34be8137e443b3e4e947f8c305a63643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
-  gameOver: 0
   walkSpeed: 10
   walkAcceleration: 45
   walkDeceleration: 30
@@ -9552,6 +9549,7 @@ MonoBehaviour:
   gravityWeak: 45
   jumpBuffer: 0.15
   groundTolerance: 0.15
+  pelletPrefab: {fileID: 5767118112691267283, guid: 0f97654ad5c439842a70a3739773b149, type: 3}
 --- !u!136 &1603016976
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -75,6 +75,7 @@ public class PlayerController : MonoBehaviour
     [Header("Attack")]
     [Tooltip("Used to allow players to attck each other with pellets.")]
     public GameObject pelletPrefab;
+    private float shootDirection = 1;
 
     private void OnEnable()
     {
@@ -217,9 +218,18 @@ public class PlayerController : MonoBehaviour
         //======================================================================================== >> ATTACKING
         // When pressing attack, allow pellet to fly out
         // Note:
+        if (move.x != 0)
+        {
+            shootDirection = move.x;
+        }
         if (attackPressed)
         {
-            //Instantiate(pelletPrefab, transform.postition, pelletPrefab.transform.rotation);
+            PelletMovement prefab = pelletPrefab.GetComponent<PelletMovement>();
+            if (prefab != null)
+            {
+                prefab.playerController = GetComponent<PlayerController>();
+            }
+            Instantiate(pelletPrefab, transform.position, Quaternion.LookRotation(Vector3.right * shootDirection));
         }
 
 
