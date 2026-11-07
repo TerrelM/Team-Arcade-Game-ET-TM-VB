@@ -10,8 +10,8 @@ public class PlayerController : MonoBehaviour
     private InputSystem_Actions inputActions;
 
     // Keeps track of player health & gameover state
-    public int health = 3;
-    public bool gameOver = false;
+    private int health = 3;
+    private bool gameOver = false;
 
     //========================================================================================== >> INPUT VARIABLES <<
     //Move
@@ -72,6 +72,8 @@ public class PlayerController : MonoBehaviour
     public float groundTolerance = 0.1f;
 
     //Used for attack
+    [Header("Attack")]
+    [Tooltip("Used to allow players to attck each other with pellets.")]
     public GameObject pelletPrefab;
 
     private void OnEnable()
