@@ -70,8 +70,9 @@ public class PlayerController : MonoBehaviour
     private bool startDecent;
     [Tooltip("How far to check for ground.")]
     public float groundTolerance = 0.1f;
-    
 
+    //Used for attack
+    public GameObject pelletPrefab;
 
     private void OnEnable()
     {
@@ -83,18 +84,6 @@ public class PlayerController : MonoBehaviour
         inputActions.Disable();
     }
 
-    public void AddHealth(int value)
-    {
-        // Only public for testing reasons
-        
-        // Sets default health to 3
-        health += value;
-
-        if (health <= 0)
-        {
-            gameOver = true;
-        }
-    }
 
     void Start()
     {
@@ -103,12 +92,6 @@ public class PlayerController : MonoBehaviour
         capsule = GetComponent<CapsuleCollider>();
         gravity = gravityStrong;
         startDecent = false;
-
-        // Allows players to cancel/quit the game
-        if (Input.GetKeyUp(KeyCode.Escape) || Input.GetButtonUp("Cancel"))
-        {
-            Application.Quit();
-        }
     }
 
     void Update()
@@ -123,7 +106,12 @@ public class PlayerController : MonoBehaviour
         {
             Player2Controls();
         }
-        
+
+        // Allows players to cancel/quit the game
+        if (Input.GetKeyUp(KeyCode.Escape) || Input.GetButtonUp("Cancel"))
+        {
+            Application.Quit();
+        }
     }
     void FixedUpdate()
     {
@@ -224,11 +212,22 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        //======================================================================================== >> ATTACKING
+        // When pressing attack, allow pellet to fly out
+        // Note:
+        if (attackPressed)
+        {
+            //Instantiate(pelletPrefab, transform.postition, pelletPrefab.transform.rotation);
+        }
+
+
         //Reset Inputs
         jumpPressed = false;
         jumpReleased = false;
         attackPressed = false;
         attackReleased = false;
+        thwackPressed = false;
+        thwackReleased = false;
     }
 
     
@@ -335,10 +334,14 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("HealthDown"))
         {
             health -= 1;
+            if (health <= 0)
+            {
+                gameOver = true;
+            }
         }
 
         // Adds health
-        if (collision.gameObject.CompareTag("HealthUp"))
+        else if (collision.gameObject.CompareTag("HealthUp"))
         {
             health += 1;
         }
