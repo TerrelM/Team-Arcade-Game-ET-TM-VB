@@ -1,5 +1,4 @@
 # Team-Arcade-Game
-# Feel free to add more to this README
 # Title: Shipshooter
 # Credits: Terrel Mathieu, Emilia Thurell, Val Bullard
 # Description: Two players shoot pellets at each while avoiding obstacles on a rocking ship.
