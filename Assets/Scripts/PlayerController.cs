@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PlayerController : MonoBehaviour
     // Keeps track of player health & gameover state
     private int health = 3;
     private bool gameOver = false;
+    public TMP_Text healthText;
 
     //========================================================================================== >> INPUT VARIABLES <<
     //Move
@@ -95,6 +97,10 @@ public class PlayerController : MonoBehaviour
         capsule = GetComponent<CapsuleCollider>();
         gravity = gravityStrong;
         startDecent = false;
+
+        // Allows for player to see health
+        string healthText = health.ToString();
+
     }
 
     void Update()
@@ -115,6 +121,9 @@ public class PlayerController : MonoBehaviour
         {
             Application.Quit();
         }
+
+        // Shows player health
+        healthText.SetText("Health: " + health);
     }
     void FixedUpdate()
     {
@@ -298,6 +307,11 @@ public class PlayerController : MonoBehaviour
         { 
             thwackReleased = true; 
         }
+
+        if (health <= 0)
+        {
+            gameOver = true;
+        }
     }
 
     private void Player2Controls()
@@ -337,6 +351,11 @@ public class PlayerController : MonoBehaviour
         if (inputActions.Player2.Thwack.WasReleasedThisFrame())
         {
             thwackReleased = true;
+        }
+
+        if (health <= 0)
+        {
+            gameOver = true;
         }
     }
 
